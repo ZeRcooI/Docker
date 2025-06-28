@@ -1,0 +1,7 @@
+FROM node:20.16.0-slim
+
+WORKDIR /usr/src/rctapp
+
+RUN npm install -g create-react-app
+
+CMD ["npx", "create-react-app", "rctapp"]

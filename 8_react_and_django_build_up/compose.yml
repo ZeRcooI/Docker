@@ -1,0 +1,18 @@
+services:
+  web:
+    build: ./myapp
+    image: myapp:1.0.0
+    container_name: djapp
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./myapp:/usr/src/myapp
+    ports:
+      - 8000:8000
+  react:
+    build: ./rctapp
+    image: react:1.0.0
+    command: npm start
+    volumes:
+      - ./rctapp:/usr/src/rctapp
+    ports:
+      - 3000:3000  

@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+WORKDIR /usr/src/app
+
+RUN pip install --upgrade pip
+
+RUN pip install django
+
+CMD ["django-admin", "startproject", "myapp"]
