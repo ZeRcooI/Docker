@@ -23,7 +23,7 @@ services:
     image: app:1.0.0
     depends_on:
       - mymongo
-  
+
   web:
     build: ./plot
     image: plot:1.0.0
