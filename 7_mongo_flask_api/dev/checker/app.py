@@ -5,7 +5,8 @@ from pymongo import MongoClient
 
 
 # client = MongoClient("mongodb://localhost:27017")
-client = MongoClient("mongodb://root:example@mymongo:27017")
+# client = MongoClient("mongodb://root:example@mymongo:27017")
+client = MongoClient("mongodb://mymongo:27017")
 
 db = client['crypto_database']
 
