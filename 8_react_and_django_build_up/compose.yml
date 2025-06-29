@@ -8,11 +8,14 @@ services:
       - ./myapp:/usr/src/myapp
     ports:
       - 8000:8000
+
   react:
     build: ./rctapp
     image: react:1.0.0
-    command: npm start
+    container_name: reactapp
+    command: sh -c "npm install && npm start"
     volumes:
       - ./rctapp:/usr/src/rctapp
+      - /usr/src/rctapp/node_modules
     ports:
-      - 3000:3000  
+      - 3000:3000
